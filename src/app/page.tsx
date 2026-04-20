@@ -139,7 +139,7 @@ const applications = [
   },
   {
     title: 'Veteran Housing',
-    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of veterans.',
+    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of military veterans nationwide.',
     image: '/app-veteran.jpg',
   },
 ]
