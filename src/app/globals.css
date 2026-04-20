@@ -17,12 +17,12 @@
   }
 
   ::selection {
-    background: #1285f3;
+    background: #193C80;
     color: white;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
     letter-spacing: -0.03em;
   }
 }
@@ -48,6 +48,12 @@
     @apply inline-flex items-center gap-2 px-8 py-3.5 border border-slate-200
            text-slate-600 font-semibold rounded-full hover:border-brand-500
            hover:text-brand-500 transition-all duration-200 text-sm tracking-wide;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white
+           font-semibold rounded-full hover:bg-accent-dark transition-all duration-200
+           text-sm tracking-wide shadow-sm hover:shadow-md;
   }
 
   .section-label {

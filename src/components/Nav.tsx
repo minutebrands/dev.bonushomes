@@ -1,13 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const links = [
-  { label: 'The Opportunity', href: '/opportunity' },
-  { label: 'For Advisors', href: '/advisors' },
-  { label: 'About', href: '/about' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Watch Webinar', href: '#webinar' },
+  { label: 'Download Case Study', href: '#case-study' },
 ]
 
 export function Nav() {
@@ -28,25 +25,18 @@ export function Nav() {
     >
       <div className="container-site">
         <div className="flex items-center justify-between h-18 py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.webp"
-              alt="BHTaxPod"
-              width={140}
-              height={40}
-              className={`h-9 w-auto transition-all ${scrolled ? '' : 'brightness-0 invert'}`}
-              priority
-            />
+          <Link href="/" className="flex items-center gap-2">
+            <span className={`font-display font-black text-xl tracking-tight transition-colors ${scrolled ? 'text-primary' : 'text-white'}`}>
+              Bonus<span className="text-accent">Home</span>
+            </span>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-sm font-medium transition-colors hover:text-brand-500 ${
+                className={`text-sm font-medium transition-colors hover:text-accent ${
                   scrolled ? 'text-slate-600' : 'text-white/85 hover:text-white'
                 }`}
               >
@@ -55,22 +45,18 @@ export function Nav() {
             ))}
           </nav>
 
-          {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+13852045517"
-              className={`text-sm font-semibold transition-colors ${
-                scrolled ? 'text-brand-500' : 'text-white'
-              }`}
+              href="tel:+14358627767"
+              className={`text-sm font-semibold transition-colors ${scrolled ? 'text-primary' : 'text-white'}`}
             >
-              (385) 204-5517
+              (435) 862-7767
             </a>
-            <Link href="/contact" className="btn-primary text-xs py-2.5 px-5">
-              Schedule a Call
+            <Link href="#book" className="btn-accent text-xs py-2.5 px-5">
+              Book A Call
             </Link>
           </div>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
             className={`md:hidden p-2 ${scrolled ? 'text-slate-700' : 'text-white'}`}
@@ -86,7 +72,6 @@ export function Nav() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div className="md:hidden bg-white border-t border-slate-100 py-4 space-y-1">
             {links.map((l) => (
@@ -94,17 +79,17 @@ export function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block px-2 py-2.5 text-sm font-medium text-slate-700 hover:text-brand-500"
+                className="block px-2 py-2.5 text-sm font-medium text-slate-700 hover:text-accent"
               >
                 {l.label}
               </Link>
             ))}
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <a href="tel:+13852045517" className="px-2 text-sm font-semibold text-brand-500">
-                (385) 204-5517
+              <a href="tel:+14358627767" className="px-2 text-sm font-semibold text-primary">
+                (435) 862-7767
               </a>
-              <Link href="/contact" className="btn-primary text-xs mx-2 justify-center">
-                Schedule a Call
+              <Link href="#book" className="btn-accent text-xs mx-2 justify-center">
+                Book A Call
               </Link>
             </div>
           </div>
