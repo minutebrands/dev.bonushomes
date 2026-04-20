@@ -29,7 +29,7 @@
 
 @layer components {
   .container-site {
-    @apply max-w-6xl mx-auto px-6 lg:px-10;
+    @apply max-w-7xl mx-auto px-6 lg:px-10;
   }
 
   .btn-primary {

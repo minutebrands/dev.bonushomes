@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { ImageSlider } from '@/components/ImageSlider'
 import {
   Home,
   Flame,
@@ -88,13 +89,12 @@ const bungalowSpecs = [
   ['Wall Material', 'Fiberglass / XPS'],
   ['Power Supply', '60A'],
   ['Flooring', 'LVP options'],
-  ['Features', 'LED lighting, pre-wired electrical, PVC/PEX plumbing, washer/dryer, full-size kitchen'],
+  ['Features', 'LED lighting, pre-wired, PVC/PEX, W/D, full-size kitchen'],
 ]
 
 const duplexSpecs = [
   ['Dimensions', "19' × 20'"],
   ['Living Space', '190 sq ft per side'],
-  ['Entrances', '2 private entrances'],
   ['Each Side Includes', 'Kitchen + bathroom'],
   ['Roof', 'Aluminum / Steel'],
   ['Insulation', 'Composite EPS / PET / XPS'],
@@ -103,11 +103,45 @@ const duplexSpecs = [
   ['Features', 'LED lighting, pre-wired electrical, PVC/PEX plumbing'],
 ]
 
+const bungalowSlides = [
+  '/bungalow-kitchen-3.jpg',
+  '/bungalow-1920.jpg',
+  '/bungalow-bed-2.jpg',
+  '/bungalow-bed-3.jpg',
+  '/bungalow-couch-1.jpg',
+  '/bungalow-couch-2.jpg',
+  '/bungalow-den.jpg',
+]
+
+const duplexSlides = [
+  '/d1.jpg',
+  '/d4.jpg',
+  '/d5.jpg',
+  '/d3.jpg',
+  '/d2.jpg',
+]
+
 const applications = [
-  'Natural Disasters',
-  'Homeless Support',
-  'Military Use',
-  'Veteran Housing',
+  {
+    title: 'Natural Disasters',
+    body: 'ReadyPod units are engineered for rapid deployment in the aftermath of hurricanes, floods, wildfires, and other natural disasters.',
+    image: '/app-natural-disasters.jpg',
+  },
+  {
+    title: 'Homeless Support',
+    body: 'ReadyPod offers scalable, self-contained housing solutions ideal for transitional shelters and permanent supportive housing.',
+    image: '/app-homeless.jpg',
+  },
+  {
+    title: 'Military Use',
+    body: 'ReadyPod units are a versatile solution for military housing, base expansions, and forward operating environments.',
+    image: '/app-military.jpg',
+  },
+  {
+    title: 'Veteran Housing',
+    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of veterans.',
+    image: '/app-veteran.jpg',
+  },
 ]
 
 export default function HomePage() {
@@ -117,50 +151,36 @@ export default function HomePage() {
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-primary">
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-40"
+          priority
         />
+        <div className="absolute inset-0 bg-primary/60" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-secondary/40 blur-[140px] pointer-events-none" />
 
         <div className="relative container-site pt-32 pb-20">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-sm text-slate-400 mb-6 tracking-wide">Paying over 37% in taxes?</p>
-              <h1 className="font-display font-black text-white text-5xl md:text-6xl leading-[1.0] tracking-tight mb-8">
-                Invest $250k.
-                <br />
-                Write off up to $1M.
-                <br />
-                Get paid every month.
-              </h1>
-              <p className="text-slate-300 text-lg leading-relaxed max-w-lg mb-10">
-                Invest $250K and turn your tax bill into an asset that gives you up to a
-                $1M write-off on active income, monthly cash flow, full professional
-                management, and a structure supported by tax attorneys to be defensible.
-              </p>
-              <div className="flex flex-wrap items-center gap-5">
-                <Link href="#book" className="btn-accent text-base py-4 px-9">
-                  Book An Intro Call
-                </Link>
-                <span className="text-slate-500 text-sm">Accredited investors only · $250K minimum</span>
-              </div>
-            </div>
-
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
-              <Image
-                src="https://highlandsteel.homes/wp-content/uploads/2025/09/studio-overbuild.png"
-                alt="Bonus Home — ReadyPod unit"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
+          <div className="max-w-3xl">
+            <p className="text-base text-white mb-6 tracking-wide">Paying over 37% in taxes?</p>
+            <h1 className="font-display font-black text-white text-5xl md:text-6xl leading-[1.0] tracking-tight mb-8">
+              Invest $250k.
+              <br />
+              Write off up to $1M.
+              <br />
+              Get paid every month.
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed max-w-lg mb-10">
+              Invest $250K and turn your tax bill into an asset that gives you up to a
+              $1M write-off on active income, monthly cash flow, full professional
+              management, and a structure supported by tax attorneys to be defensible.
+            </p>
+            <div className="flex flex-wrap items-center gap-5">
+              <Link href="#book" className="btn-accent text-base py-4 px-9">
+                Book An Intro Call
+              </Link>
+              <span className="text-slate-500 text-sm">Accredited investors only · $250K minimum</span>
             </div>
           </div>
         </div>
@@ -187,7 +207,7 @@ export default function HomePage() {
 
       {/* ── PROBLEM ─────────────────────────────────────────────────── */}
       <section className="py-28 bg-white">
-        <div className="container-site max-w-4xl">
+        <div className="container-site">
           <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 leading-tight text-center mb-8">
             Your Tax Bill Is Your Biggest Expense.
             <br />
@@ -213,16 +233,14 @@ export default function HomePage() {
 
           <p className="text-center text-accent font-semibold text-sm uppercase tracking-widest mb-10">What you've likely tried</p>
 
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {tried.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="flex gap-5 pb-6 border-b border-slate-100 last:border-0">
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
+              <div key={title} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-accent/30 hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center mb-5 shadow-sm">
                   <Icon className="w-5 h-5 text-accent" />
                 </div>
-                <div>
-                  <p className="font-display font-bold text-slate-900 mb-1">{title}</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">{body}</p>
-                </div>
+                <p className="font-display font-bold text-slate-900 mb-2">{title}</p>
+                <p className="text-slate-500 text-sm leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -302,7 +320,7 @@ export default function HomePage() {
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
               <Image
-                src="https://highlandsteel.homes/wp-content/uploads/2025/09/dup-render-desert.png"
+                src="/asset-section.jpg"
                 alt="ReadyPod Duplex deployed in the field"
                 fill
                 className="object-cover"
@@ -353,6 +371,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-10">
             {/* Bungalow */}
             <div className="rounded-2xl border border-slate-100 overflow-hidden">
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image src="/bungalow.webp" alt="The Bungalow" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
               <div className="bg-primary px-8 py-6">
                 <p className="font-display font-black text-white text-2xl">The Bungalow</p>
                 <p className="text-brand-400 text-sm mt-1">380 sq ft · Single unit</p>
@@ -365,10 +386,14 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+              <ImageSlider images={bungalowSlides} alt="The Bungalow" />
             </div>
 
             {/* Duplex */}
             <div className="rounded-2xl border border-slate-100 overflow-hidden">
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image src="/duplex.webp" alt="The Duplex" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
               <div className="bg-secondary px-8 py-6">
                 <p className="font-display font-black text-white text-2xl">The Duplex</p>
                 <p className="text-brand-400 text-sm mt-1">190 sq ft per side · Dual unit</p>
@@ -381,29 +406,40 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+              <ImageSlider images={duplexSlides} alt="The Duplex" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ── APPLICATIONS ────────────────────────────────────────────── */}
-      <section className="py-28 bg-slate-50 border-y border-slate-100">
+      <section className="py-28 bg-primary">
         <div className="container-site">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="section-label text-brand-400 mb-4">Applications</p>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-8" />
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-primary leading-tight">
-              Wherever housing is needed most.
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
+              ReadyPod is Ideal for Multiple Applications that Need Durable, Rapidly Deployable Housing Solutions
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {applications.map((app) => (
-              <div key={app} className="bg-white rounded-2xl p-8 border border-slate-100 text-center hover:border-accent/30 hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/5 border border-primary/10 mx-auto mb-4 flex items-center justify-center">
-                  <span className="w-2 h-2 rounded-full bg-accent" />
+              <div key={app.title} className="relative rounded-2xl overflow-hidden group cursor-default">
+                <div className="relative aspect-[3/4]">
+                  <Image
+                    src={app.image}
+                    alt={app.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <p className="font-display font-black text-white text-xl mb-2">{app.title}</p>
+                    <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{app.body}</p>
+                  </div>
                 </div>
-                <p className="font-display font-bold text-slate-900">{app}</p>
               </div>
             ))}
           </div>
@@ -425,8 +461,8 @@ export default function HomePage() {
             <Link href="#book" className="btn-accent text-base py-4 px-10">
               Book An Intro Call
             </Link>
-            <a href="tel:+14358627767" className="btn-ghost border-white/20 text-white hover:border-brand-400 hover:text-brand-400 text-base py-4 px-10">
-              (435) 862-7767
+            <a href="sms:+13852045517" className="btn-ghost border-white/20 text-white hover:border-brand-400 hover:text-brand-400 text-base py-4 px-10">
+              Text Us: (385) 204-5517
             </a>
           </div>
           <p className="text-slate-600 text-sm mt-6">Accredited investors only · $250K minimum</p>

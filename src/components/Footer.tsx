@@ -16,12 +16,8 @@ export function Footer() {
               that delivers a $1M write-off, monthly cash flow, and a real asset you own.
             </p>
             <div className="flex gap-4 mt-6">
-              <a href="tel:+14358627767" className="text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">
-                (435) 862-7767
-              </a>
-              <span className="text-slate-700">·</span>
-              <a href="mailto:kason@highlandsteel.homes" className="text-sm font-semibold text-slate-400 hover:text-slate-200 transition-colors">
-                kason@highlandsteel.homes
+              <a href="sms:+13852045517" className="text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">
+                Text Us: (385) 204-5517
               </a>
             </div>
           </div>

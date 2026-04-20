@@ -47,10 +47,10 @@ export function Nav() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+14358627767"
+              href="sms:+13852045517"
               className={`text-sm font-semibold transition-colors ${scrolled ? 'text-primary' : 'text-white'}`}
             >
-              (435) 862-7767
+              (385) 204-5517
             </a>
             <Link href="#book" className="btn-accent text-xs py-2.5 px-5">
               Book A Call
@@ -85,8 +85,8 @@ export function Nav() {
               </Link>
             ))}
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <a href="tel:+14358627767" className="px-2 text-sm font-semibold text-primary">
-                (435) 862-7767
+              <a href="sms:+13852045517" className="px-2 text-sm font-semibold text-primary">
+                (385) 204-5517
               </a>
               <Link href="#book" className="btn-accent text-xs mx-2 justify-center">
                 Book A Call
