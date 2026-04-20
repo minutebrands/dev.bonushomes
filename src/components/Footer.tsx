@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="mb-4">
-              <span className="font-display font-black text-2xl tracking-tight text-white">
-                Bonus<span className="text-accent">Home</span>
-              </span>
+              <Image src="/bhlogo.webp" alt="BonusHome" width={140} height={40} className="h-10 w-auto" />
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-slate-400">
               The world's fastest rapidly deployable home — a tax-advantaged investment

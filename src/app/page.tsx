@@ -163,7 +163,7 @@ export default function HomePage() {
 
         <div className="relative container-site pt-32 pb-20">
           <div className="max-w-3xl">
-            <p className="text-base text-white mb-6 tracking-wide">Paying over 37% in taxes?</p>
+            <p className="text-base text-white mb-6 tracking-wide">Paying over 30% in taxes?</p>
             <h1 className="font-display font-black text-white text-5xl md:text-6xl leading-[1.0] tracking-tight mb-8">
               Invest $250k.
               <br />

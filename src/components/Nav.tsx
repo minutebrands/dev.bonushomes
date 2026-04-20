@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const links = [
   { label: 'Watch Webinar', href: '#webinar' },
@@ -26,9 +27,7 @@ export function Nav() {
       <div className="container-site">
         <div className="flex items-center justify-between h-18 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className={`font-display font-black text-xl tracking-tight transition-colors ${scrolled ? 'text-primary' : 'text-white'}`}>
-              Bonus<span className="text-accent">Home</span>
-            </span>
+            <Image src="/bhlogo.webp" alt="BonusHome" width={140} height={40} className="h-10 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
