@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-slate-900;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: #1285f3;
+    color: white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply max-w-6xl mx-auto px-6 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 bg-brand-500 text-white
+           font-semibold rounded-full hover:bg-brand-600 transition-all duration-200
+           text-sm tracking-wide shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 border-2 border-accent
+           text-accent font-semibold rounded-full hover:bg-accent hover:text-white
+           transition-all duration-200 text-sm tracking-wide;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 border border-slate-200
+           text-slate-600 font-semibold rounded-full hover:border-brand-500
+           hover:text-brand-500 transition-all duration-200 text-sm tracking-wide;
+  }
+
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-brand-500;
+  }
+
+  .section-divider {
+    @apply w-12 h-0.5 bg-accent;
+  }
+}
