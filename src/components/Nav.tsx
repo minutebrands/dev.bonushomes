@@ -27,7 +27,7 @@ export function Nav() {
       <div className="container-site">
         <div className="flex items-center justify-between h-18 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/bhlogo.webp" alt="BonusHome" width={140} height={40} className="h-10 w-auto" />
+            <Image src="/bhlogo.webp" alt="BonusHome" width={200} height={25} className="h-6 w-auto" quality={100} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

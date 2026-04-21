@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="mb-4">
-              <Image src="/bhlogo.webp" alt="BonusHome" width={140} height={40} className="h-10 w-auto" />
+              <Image src="/bhlogo.webp" alt="BonusHome" width={200} height={25} className="h-6 w-auto" quality={100} />
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-slate-400">
               The world's fastest rapidly deployable home — a tax-advantaged investment
