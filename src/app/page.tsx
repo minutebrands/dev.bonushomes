@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -177,10 +179,13 @@ export default function HomePage() {
               management, and a structure supported by tax attorneys to be defensible.
             </p>
             <div className="flex flex-wrap items-center gap-5">
-              <Link href="#book" className="btn-accent text-base py-4 px-9">
+              <Link href="/book" className="btn-accent text-base py-4 px-9">
                 Book An Intro Call
               </Link>
-              <span className="text-slate-500 text-sm">Accredited investors only · $250K minimum</span>
+             
+            <span className="text-white text-sm">
+  Accredited investors only · $250K minimum
+</span>
             </div>
           </div>
         </div>
@@ -268,10 +273,10 @@ export default function HomePage() {
           </div>
 
           <div className="text-center" id="book">
-            <Link href="#book" className="btn-accent text-base py-4 px-10 mb-4 inline-flex">
+            <Link href="/book" className="btn-accent text-base py-4 px-10 mb-4 inline-flex">
               See What Checks The Boxes — Book Your Call
             </Link>
-            <p className="text-slate-500 text-sm mt-4">Accredited investors only · $250K minimum</p>
+            <p className="text-white text-sm">Accredited investors only · $250K minimum</p>
           </div>
         </div>
       </section>
@@ -458,16 +463,30 @@ export default function HomePage() {
             We work with accredited investors who are serious about turning their tax burden into a performing asset.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="#book" className="btn-accent text-base py-4 px-10">
+            <Link href="/book" className="btn-accent text-base py-4 px-10">
               Book An Intro Call
             </Link>
             <a href="sms:+13852045517" className="btn-ghost border-white/20 text-white hover:border-brand-400 hover:text-brand-400 text-base py-4 px-10">
               Text Us: (385) 204-5517
             </a>
           </div>
-          <p className="text-slate-600 text-sm mt-6">Accredited investors only · $250K minimum</p>
+          <p className="text-white text-sm">Accredited investors only · $250K minimum</p>
         </div>
       </section>
+
+
+
+   {/* <div id="book-call" className="py-20 bg-white">
+  <div className="container-site max-w-xl mx-auto text-center">
+    <h2 className="text-3xl font-bold mb-4">Book a Call</h2>
+
+    <p className="text-red-500 text-sm mb-6">
+      Accredited Investors Only · $250K Minimum
+    </p>
+
+    <ContactForm />
+  </div>
+</div> */}
 
       <Footer />
     </>
