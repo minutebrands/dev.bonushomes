@@ -136,7 +136,7 @@ export function Nav() {
                 <a
                   key={l.href}
                   href={l.href}
-                  download
+                 target="_blank"
                   className={`text-sm font-medium transition-colors hover:text-accent ${
                     scrolled ? 'text-slate-600' : 'text-white/85 hover:text-white'
                   }`}
@@ -191,7 +191,7 @@ export function Nav() {
                 <a
                   key={l.href}
                   href={l.href}
-                  download
+                  target="_blank"
                   onClick={() => setOpen(false)}
                   className="block px-2 py-2.5 text-sm font-medium text-slate-700 hover:text-accent"
                 >
