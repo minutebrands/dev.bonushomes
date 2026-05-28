@@ -62,7 +62,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="mb-4">
-              <Image src="/bhlogo.webp" alt="BonusHome" width={200} height={25} className="h-6 w-auto" quality={100} />
+              <Image src="/bhlogo.webp" alt="BonusHome" width={200} height={25} className="h-6 w-auto brightness-0 invert" quality={100} />
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-slate-400">
               The world's fastest rapidly deployable home — a tax-advantaged investment
