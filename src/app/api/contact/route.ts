@@ -16,14 +16,19 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: "chandatiwari.vll@gmail.com",
       to: "chandatiwari.vll@gmail.com",
-      replyTo: data.email, // ✅ IMPORTANT LINE
-      subject: "New Lead - Book a Call",
+      replyTo: data.email,
+      subject: `New Lead - ${data.firstName} ${data.lastName} (${data.company})`,
       text: `
-        Name: ${data.name}
-        Email: ${data.email}
-        Phone: ${data.phone}
-        Investment: ${data.investment}
-Message: ${data.message || "N/A"}
+New Lead - Book a Call
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Cell: ${data.cell}
+Company: ${data.company}
+# of RIAs: ${data.numRIAs}
+# of Offices: ${data.numOffices}
+# of HNIs ($800K+/yr): ${data.numHNIs}
+AUM: ${data.aum}
       `,
     });
 
