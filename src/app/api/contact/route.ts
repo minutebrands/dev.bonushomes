@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const LEAD_NOTIFY_EMAIL = (process.env.LEAD_NOTIFY_EMAIL ?? "").split(",").map(s => s.trim()).filter(Boolean);
-
-// Salesforce — fill these in .env.local when ready
-const SF_ENDPOINT = process.env.SALESFORCE_ENDPOINT ?? "";
-const SF_API_KEY  = process.env.SALESFORCE_API_KEY  ?? "";
-
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const LEAD_NOTIFY_EMAIL = (process.env.LEAD_NOTIFY_EMAIL ?? "").split(",").map(s => s.trim()).filter(Boolean);
+  const SF_ENDPOINT = process.env.SALESFORCE_ENDPOINT ?? "";
+  const SF_API_KEY  = process.env.SALESFORCE_API_KEY  ?? "";
+
   const data = await req.json();
 
   const leadText = `
