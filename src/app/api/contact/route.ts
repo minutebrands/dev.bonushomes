@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const LEAD_NOTIFY_EMAIL = process.env.LEAD_NOTIFY_EMAIL ?? "";
+const LEAD_NOTIFY_EMAIL = (process.env.LEAD_NOTIFY_EMAIL ?? "").split(",").map(s => s.trim()).filter(Boolean);
 
 // Salesforce — fill these in .env.local when ready
 const SF_ENDPOINT = process.env.SALESFORCE_ENDPOINT ?? "";
@@ -13,16 +13,12 @@ export async function POST(req: Request) {
   const data = await req.json();
 
   const leadText = `
-New Lead — Book a Call
+New Inquiry — Bonus Homes
 
-Name:       ${data.firstName} ${data.lastName}
-Email:      ${data.email}
-Cell:       ${data.cell}
-Company:    ${data.company}
-# of RIAs:  ${data.numRIAs}
-# of Offices: ${data.numOffices}
-# of HNIs ($800K+/yr): ${data.numHNIs}
-AUM:        ${data.aum}
+Name:    ${data.firstName} ${data.lastName}
+Email:   ${data.email}
+Mobile:  ${data.mobile}
+Role:    ${data.role}
   `.trim();
 
   // ── Resend email ───────────────────────────────────────────────
@@ -30,7 +26,7 @@ AUM:        ${data.aum}
     from:     "Bonus Homes <leads@bonushomes.io>",
     to:       LEAD_NOTIFY_EMAIL,
     replyTo:  data.email,
-    subject:  `New Lead — ${data.firstName} ${data.lastName} (${data.company})`,
+    subject:  `New Inquiry — ${data.firstName} ${data.lastName} (${data.role})`,
     text:     leadText,
   });
 
@@ -48,15 +44,11 @@ AUM:        ${data.aum}
           "Authorization": `Bearer ${SF_API_KEY}`,
         },
         body: JSON.stringify({
-          FirstName:    data.firstName,
-          LastName:     data.lastName,
-          Email:        data.email,
-          MobilePhone:  data.cell,
-          Company:      data.company,
-          NumberOfRIAs__c:     data.numRIAs,
-          NumberOfOffices__c:  data.numOffices,
-          NumberOfHNIs__c:     data.numHNIs,
-          AUM__c:              data.aum,
+          FirstName:   data.firstName,
+          LastName:    data.lastName,
+          Email:       data.email,
+          MobilePhone: data.mobile,
+          Title:       data.role,
         }),
       });
     } catch (err) {

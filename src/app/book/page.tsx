@@ -63,17 +63,11 @@ export default function BookPage() {
 </Link>
     
 
-    <h1 className="text-3xl font-bold mb-4 text-center">
-      Book a Call
-    </h1>
-
-    <p className="text-center text-gray-600 mb-6">
-      Accredited investors only — $250K minimum
+    <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+      Learn how advisors, CPAs, attorneys, family offices, business owners, and investors are incorporating Bonus Homes into broader planning and investment strategies.
     </p>
 
     <ContactForm />
-
- 
 
   </div>
 </section>
