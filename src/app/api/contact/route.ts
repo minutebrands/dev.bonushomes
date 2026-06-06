@@ -31,26 +31,21 @@ Role:    ${data.role}
     console.error("Resend error:", emailResult.error);
   }
 
-  // ── Salesforce ─────────────────────────────────────────────────
-  if (SF_ENDPOINT && SF_API_KEY) {
-    try {
-      await fetch(SF_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${SF_API_KEY}`,
-        },
-        body: JSON.stringify({
-          FirstName:   data.firstName,
-          LastName:    data.lastName,
-          Email:       data.email,
-          MobilePhone: data.mobile,
-          Title:       data.role,
-        }),
-      });
-    } catch (err) {
-      console.error("Salesforce error:", err);
-    }
+  // ── Zapier ─────────────────────────────────────────────────────
+  try {
+    await fetch("https://hooks.zapier.com/hooks/catch/27852567/4bxok7e/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        first_name: data.firstName,
+        last_name:  data.lastName,
+        email:      data.email,
+        mobile:     data.mobile,
+        role:       data.role,
+      }),
+    });
+  } catch (err) {
+    console.error("Zapier error:", err);
   }
 
   return NextResponse.json({ success: true });
