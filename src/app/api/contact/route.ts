@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const LEAD_NOTIFY_EMAIL = (process.env.LEAD_NOTIFY_EMAIL ?? "").split(",").map(s => s.trim()).filter(Boolean);
+  const LEAD_NOTIFY_EMAIL = (process.env.LEAD_NOTIFY_EMAIL ?? "shaneglvr@gmail.com, shadglover@gmail.com").split(",").map(s => s.trim()).filter(Boolean);
   const SF_ENDPOINT = process.env.SALESFORCE_ENDPOINT ?? "";
   const SF_API_KEY  = process.env.SALESFORCE_API_KEY  ?? "";
 
