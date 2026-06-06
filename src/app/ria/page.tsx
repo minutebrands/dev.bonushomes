@@ -1,85 +1,30 @@
-import ContactForm from "@/components/ContactForm";
-
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
 import { ImageSlider } from '@/components/ImageSlider'
-import {
-  Home,
-  Flame,
-  Users,
-  Camera,
-  Heart,
-  AlertTriangle,
-  CheckCircle,
-  Zap,
-  Shield,
-  DollarSign,
-  Smile,
-} from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Bonus Home — Invest $250K. Write Off $1M. Get Paid Every Month.',
+  title: "Bonus Home — The World's Fastest Rapidly Deployable Home",
 }
-
-const tried = [
-  {
-    icon: Home,
-    title: 'Cost Seg & STRs',
-    body: 'Requires "material participation." You essentially buy yourself a second full-time job managing guests and maintenance to qualify for the write-off.',
-  },
-  {
-    icon: Flame,
-    title: 'Oil & Gas',
-    body: 'High risk and depleting assets. While the write-off is decent, the long-term cash flow is unpredictable and eventually disappears.',
-  },
-  {
-    icon: Users,
-    title: 'Syndications',
-    body: 'Most real estate syndications only offset passive income. If you have a W2 or active business income, these do nothing to lower your primary tax bill.',
-  },
-  {
-    icon: Camera,
-    title: 'Equipment Leasing',
-    body: 'Aggressive structures often face heavy IRS scrutiny. Finding a program with institutional-grade legal backing is extremely rare.',
-  },
-  {
-    icon: Heart,
-    title: 'Charitable Giving',
-    body: 'A noble choice, but it\'s a 1:1 deduction. You lose the dollar to save $0.37. It lacks the 4:1 leverage needed to build wealth while saving taxes.',
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Land Easements',
-    body: 'Significant IRS "Listing Transaction" risks. Many promoters have been shut down, leaving investors with massive audits and penalties.',
-  },
-]
-
-const pillars = [
-  { icon: DollarSign, title: '4:1 Leveraged Write-off', body: 'Year-one deduction at 400% of what you deploy.' },
-  { icon: Shield,     title: 'Defensible Structure',    body: 'Tax attorneys. Opinion letters. CPA-confirmed.' },
-  { icon: CheckCircle, title: 'Contractual Cash Flow',  body: 'Monthly. After debt service. In your agreement.' },
-  { icon: Smile,      title: 'Zero Headaches',          body: 'No maintenance. No second job. No headaches.' },
-]
 
 const features = [
   {
     title: 'Rapid Deployment Capability',
-    body: 'Units operational within hours, no permanent foundation needed.',
+    body: 'ReadyPod units are designed for speed. Having no need for a permanent foundation, our Duplex and Bungalow models can be delivered and operational within hours, allowing emergency response teams to provide immediate shelter to displaced families and critical personnel.',
   },
   {
     title: 'Industrial-Grade Durability & Strength',
-    body: 'Reinforced steel frames engineered for the harshest environments.',
+    body: 'Built to withstand harsh environments, ReadyPod structures feature reinforced steel frames to ensure long-term resilience. Whether deployed in hurricane zones, wildfire aftermaths, or flood-prone regions, these units are engineered to perform under pressure and remain intact when traditional housing fails.',
   },
   {
     title: 'Complete Living Quarters',
-    body: 'Includes bathroom, kitchen, sleeping areas, and climate control.',
+    body: 'Each ReadyPod includes a private bathroom, full kitchen, sleeping areas, and climate control—providing comfort, safety, and privacy in even the most chaotic conditions. These turn-key living spaces eliminate the need for separate infrastructure, making them ideal for remote or compromised areas.',
   },
   {
     title: 'Scalable and Adaptable Footprint',
-    body: 'Two models — Duplex and Bungalow — deployable individually or in clusters.',
+    body: "ReadyPod's two core models, the Duplex and the Bungalow, offer flexibility to suit a range of deployment needs. From single-family relief to temporary workforce lodging or mobile command centers, the units can be deployed individually or in clusters, depending on the scale and scope of the emergency.",
   },
 ]
 
@@ -90,19 +35,25 @@ const bungalowSpecs = [
   ['Insulation', 'Composite EPS / PET / XPS'],
   ['Wall Material', 'Fiberglass / XPS'],
   ['Power Supply', '60A'],
-  ['Flooring', 'LVP options'],
-  ['Features', 'LED lighting, pre-wired, PVC/PEX, W/D, full-size kitchen'],
+  ['Flooring', 'LVP – Natural Rustik, White, Gregio Notte'],
+  ['Lighting', 'LED'],
+  ['Electrical', 'Pre-wired'],
+  ['Plumbing', 'PVC / PEX'],
 ]
 
 const duplexSpecs = [
   ['Dimensions', "19' × 20'"],
   ['Living Space', '190 sq ft per side'],
-  ['Each Side Includes', 'Kitchen + bathroom'],
+  ['Private Entrances', '2'],
+  ['Each Side', 'Kitchen, bedroom & bathroom'],
   ['Roof', 'Aluminum / Steel'],
   ['Insulation', 'Composite EPS / PET / XPS'],
   ['Wall Material', 'Fiberglass / XPS'],
   ['Power Supply', '60A'],
-  ['Features', 'LED lighting, pre-wired electrical, PVC/PEX plumbing'],
+  ['Flooring', 'LVP – Natural Rustik, White, Gregio Notte'],
+  ['Lighting', 'LED'],
+  ['Electrical', 'Pre-wired'],
+  ['Plumbing', 'PVC / PEX'],
 ]
 
 const bungalowSlides = [
@@ -141,12 +92,12 @@ const applications = [
   },
   {
     title: 'Veteran Housing',
-    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of military veterans nationwide.',
+    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of veterans.',
     image: '/app-veteran.jpg',
   },
 ]
 
-export default function HomePage() {
+export default function RiaPage() {
   return (
     <>
       <Nav />
@@ -165,127 +116,31 @@ export default function HomePage() {
 
         <div className="relative container-site pt-32 pb-20">
           <div className="max-w-3xl">
-            <p className="text-base text-white mb-6 tracking-wide">Paying over 30% in taxes?</p>
+            <p className="text-base text-white mb-6 tracking-wide">Introducing ReadyPod</p>
             <h1 className="font-display font-black text-white text-5xl md:text-6xl leading-[1.0] tracking-tight mb-8">
-              Invest $250k.
+              The World's Fastest
               <br />
-              Write off up to $1M.
+              Rapidly Deployable
               <br />
-              Get paid every month.
+              Home
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed max-w-lg mb-10">
-              Invest $250K and turn your tax bill into an asset that gives you up to a
-              $1M write-off on active income, monthly cash flow, full professional
-              management, and a structure supported by tax attorneys to be defensible.
+              Designed specifically for disaster response and recovery. Operational within hours, no permanent foundation needed.
             </p>
             <div className="flex flex-wrap items-center gap-5">
               <Link href="/book" className="btn-accent text-base py-4 px-9">
                 Book An Intro Call
               </Link>
-             
-            <span className="text-white text-sm">
-  Accredited investors only · $250K minimum
-</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── STATS BAR ──────────────────────────────────────────────── */}
-      <section className="bg-secondary py-12 border-y border-white/10">
-        <div className="container-site">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: '$1M',     label: 'Year-one offset' },
-              { value: '23.96%', label: 'Target IRR' },
-              { value: '7%',     label: 'Cash-on-cash' },
-              { value: '4:1',    label: 'Tax leverage' },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="font-display font-black text-4xl text-white mb-1">{s.value}</p>
-                <p className="text-slate-300 text-sm">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROBLEM ─────────────────────────────────────────────────── */}
-      <section className="py-28 bg-white">
-        <div className="container-site">
-          <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 leading-tight text-center mb-8">
-            Your Tax Bill Is Your Biggest Expense.
-            <br />
-            Nothing You've Tried Checks All The Boxes.
-          </h2>
-          <p className="text-accent text-lg italic text-center mb-10 leading-relaxed">
-            You earn $1M or more. You keep about half. The rest goes to the IRS — 37 to 50 cents of every dollar, gone.
-          </p>
-          <p className="text-slate-500 text-lg text-center mb-12">
-            Maybe you haven't tried to fix it yet. Maybe you've tried a few things. Either way, it isn't giving you the results you want.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-14">
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <p className="font-display font-bold text-slate-900 mb-2">If you haven't had a tax strategy:</p>
-              <p className="text-slate-500 text-sm leading-relaxed">The basic playbook was built for a much smaller problem. Those tools have a ceiling. Your income passed it a long time ago.</p>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <p className="font-display font-bold text-slate-900 mb-2">If you've tried strategies:</p>
-              <p className="text-slate-500 text-sm leading-relaxed">Most solve one thing but break on another. No strategy gives you all four at once.</p>
-            </div>
-          </div>
-
-          <p className="text-center text-accent font-semibold text-sm uppercase tracking-widest mb-10">What you've likely tried</p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {tried.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-accent/30 hover:shadow-md transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center mb-5 shadow-sm">
-                  <Icon className="w-5 h-5 text-accent" />
-                </div>
-                <p className="font-display font-bold text-slate-900 mb-2">{title}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PATTERN / 4 PILLARS ─────────────────────────────────────── */}
-      <section className="py-28 bg-primary">
-        <div className="container-site">
-          <div className="text-center mb-16">
-            <p className="text-slate-400 text-lg mb-2">The pattern is simple.</p>
-            <h2 className="font-display font-black text-white text-4xl md:text-5xl leading-tight max-w-3xl mx-auto">
-              No strategy you've had access to does all four of these at once.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {pillars.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-brand-400/40 transition-colors">
-                <Icon className="w-7 h-7 text-brand-400 mb-5" />
-                <p className="font-display font-bold text-white text-lg mb-2">{title}</p>
-                <p className="text-slate-400 text-sm leading-relaxed">{body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center" id="book">
-            <Link href="/book" className="btn-accent text-base py-4 px-10 mb-4 inline-flex">
-              See What Checks The Boxes — Book Your Call
-            </Link>
-            <p className="text-white text-sm">Accredited investors only · $250K minimum</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── HIGHLAND STEEL INTRO ────────────────────────────────────── */}
+      {/* ── READYPOD INTRO ────────────────────────────────────────── */}
       <section className="py-28 bg-white">
         <div className="container-site">
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <p className="section-label text-brand-400 mb-4">The Asset</p>
+            <p className="section-label text-brand-400 mb-4">Introducing ReadyPod</p>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-8" />
             <h2 className="font-display font-black text-primary text-4xl md:text-6xl leading-tight mb-6">
               The World's Fastest Rapidly Deployable Home
@@ -303,9 +158,9 @@ export default function HomePage() {
               </h3>
               <ul className="space-y-4 mb-8">
                 {[
-                  'Natural disasters are increasing in frequency and impact',
-                  'Few ready-to-deploy housing solutions exist for governments during natural disasters',
-                  'Existing solutions (trailers, hotel vouchers, tents) are slow, unsafe, and inefficient',
+                  'Natural disasters are increasing in frequency and impact.',
+                  'There are few, if any, ready-to-deploy housing solutions available to federal and local governments during natural disasters.',
+                  'Existing solutions (trailers, hotel vouchers, tents) are slow, unsafe, and inefficient.',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
@@ -315,7 +170,10 @@ export default function HomePage() {
               </ul>
               <p className="text-slate-600 leading-relaxed mb-4">
                 In the wake of natural disasters, communities need housing solutions that are fast, durable, and
-                dignified — and that's exactly what ReadyPod delivers.
+                dignified — and that's exactly what ReadyPod delivers. Built on our proven Duplex and Bungalow models,
+                these industrial-strength units are engineered for rapid deployment in crisis zones. Whether sheltering
+                displaced families or supporting field operations, ReadyPod units offer safe, self-contained
+                environments that can be operational within hours.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Emergency housing has never been more attainable or adaptable, <em>until now.</em>
@@ -383,6 +241,9 @@ export default function HomePage() {
                 <p className="font-display font-black text-white text-2xl">The Bungalow</p>
                 <p className="text-brand-400 text-sm mt-1">380 sq ft · Single unit</p>
               </div>
+              <div className="px-8 py-6 bg-slate-50 border-b border-slate-100">
+                <p className="text-slate-600 text-sm leading-relaxed">A modern dwelling designed to make the most of its living space. With a washer/dryer and full-size kitchen, the Bungalow can be configured to accommodate families in a safe and comfortable environment.</p>
+              </div>
               <div className="divide-y divide-slate-100">
                 {bungalowSpecs.map(([label, value]) => (
                   <div key={label} className="flex justify-between gap-4 px-8 py-4">
@@ -402,6 +263,9 @@ export default function HomePage() {
               <div className="bg-secondary px-8 py-6">
                 <p className="font-display font-black text-white text-2xl">The Duplex</p>
                 <p className="text-brand-400 text-sm mt-1">190 sq ft per side · Dual unit</p>
+              </div>
+              <div className="px-8 py-6 bg-slate-50 border-b border-slate-100">
+                <p className="text-slate-600 text-sm leading-relaxed">Specifically designed for efficiency, the Duplex is divided into two equal units, each with its private entrance, fully equipped kitchen, cozy bedroom, and modern bathroom.</p>
               </div>
               <div className="divide-y divide-slate-100">
                 {duplexSpecs.map(([label, value]) => (
@@ -457,10 +321,10 @@ export default function HomePage() {
         <div className="relative container-site text-center">
           <p className="section-label text-brand-400 mb-6">Ready to Talk?</p>
           <h2 className="font-display font-black text-white text-4xl md:text-5xl leading-tight mb-6 max-w-3xl mx-auto">
-            $250K in. $1M write-off. Monthly cash flow. A real asset you own.
+            Resilient options built to meet the urgent demands of emergency housing.
           </h2>
           <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-            We work with accredited investors who are serious about turning their tax burden into a performing asset.
+            Learn how ReadyPod is solving the emergency housing crisis — for governments, military, and humanitarian organizations worldwide.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/book" className="btn-accent text-base py-4 px-10">
@@ -470,23 +334,8 @@ export default function HomePage() {
               Text Us: (385) 204-5517
             </a>
           </div>
-          <p className="text-white text-sm">Accredited investors only · $250K minimum</p>
         </div>
       </section>
-
-
-
-   {/* <div id="book-call" className="py-20 bg-white">
-  <div className="container-site max-w-xl mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-4">Book a Call</h2>
-
-    <p className="text-red-500 text-sm mb-6">
-      Accredited Investors Only · $250K Minimum
-    </p>
-
-    <ContactForm />
-  </div>
-</div> */}
 
       <Footer />
     </>

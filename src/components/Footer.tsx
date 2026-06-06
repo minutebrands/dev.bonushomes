@@ -65,8 +65,7 @@ export function Footer() {
               <Image src="/bhlogo.webp" alt="BonusHome" width={200} height={25} className="h-6 w-auto brightness-0 invert" quality={100} />
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-slate-400">
-              The world's fastest rapidly deployable home — a tax-advantaged investment
-              that delivers a $1M write-off, monthly cash flow, and a real asset you own.
+              The world's fastest rapidly deployable home — engineered for rapid deployment in disaster response, emergency housing, and humanitarian operations worldwide.
             </p>
             <div className="flex gap-4 mt-6">
               <a href="sms:+13852045517" className="text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">
