@@ -37,8 +37,22 @@ AUM:           ${data.aum}
     console.error("Resend threw:", err);
   }
 
-  // ── Zapier (disabled) ──────────────────────────────────────────
-  // await fetch("https://hooks.zapier.com/hooks/catch/27852567/4bxok7e/", { ... });
+  // ── Zapier ─────────────────────────────────────────────────────
+  try {
+    await fetch("https://hooks.zapier.com/hooks/catch/27852567/4bxok7e/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        first_name: data.firstName,
+        last_name:  data.lastName,
+        email:      data.email,
+        mobile:     data.cell,
+        role:       data.role,
+      }),
+    });
+  } catch (err) {
+    console.error("Zapier error:", err);
+  }
 
   return NextResponse.json({ success: true });
 }
