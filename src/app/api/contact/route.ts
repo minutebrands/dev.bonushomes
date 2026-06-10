@@ -24,7 +24,7 @@ AUM:           ${data.aum}
   // ── Resend email ───────────────────────────────────────────────
   try {
     const emailResult = await resend.emails.send({
-      from:     "Bonus Homes <leads@bonushomes.io>",
+      from:     "Bonus Homes <onboarding@resend.dev>",
       to:       LEAD_NOTIFY_EMAIL,
       replyTo:  data.email,
       subject:  `New Inquiry — ${data.firstName} ${data.lastName} (${data.role})`,
