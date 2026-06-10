@@ -6,9 +6,14 @@ export default function ContactForm() {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
+    cell: "",
     email: "",
-    mobile: "",
     role: "",
+    company: "",
+    numRIAs: "",
+    numOffices: "",
+    numHNIs: "",
+    aum: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -73,11 +78,11 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1">
-        <label className="text-sm font-medium text-gray-700">Mobile Number <span className="text-red-500">*</span></label>
+        <label className="text-sm font-medium text-gray-700">Cell <span className="text-red-500">*</span></label>
         <input
           type="tel"
           required
-          onChange={set("mobile")}
+          onChange={set("cell")}
           className="border p-3 w-full rounded-lg"
         />
       </div>
@@ -99,6 +104,60 @@ export default function ContactForm() {
           <option value="Investor">Investor</option>
           <option value="Other">Other</option>
         </select>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-gray-700">Company <span className="text-red-500">*</span></label>
+        <input
+          type="text"
+          required
+          onChange={set("company")}
+          className="border p-3 w-full rounded-lg"
+        />
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div className="flex flex-col gap-1">
+          <label className="text-sm font-medium text-gray-700"># of RIAs <span className="text-red-500">*</span></label>
+          <input
+            type="number"
+            min="0"
+            required
+            onChange={set("numRIAs")}
+            className="border p-3 w-full rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="text-sm font-medium text-gray-700"># of Offices <span className="text-red-500">*</span></label>
+          <input
+            type="number"
+            min="0"
+            required
+            onChange={set("numOffices")}
+            className="border p-3 w-full rounded-lg"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-gray-700"># of HNIs ($800K+ per year) <span className="text-red-500">*</span></label>
+        <input
+          type="number"
+          min="0"
+          required
+          onChange={set("numHNIs")}
+          className="border p-3 w-full rounded-lg"
+        />
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-gray-700">AUM (Assets Under Management) <span className="text-red-500">*</span></label>
+        <input
+          type="text"
+          required
+          onChange={set("aum")}
+          className="border p-3 w-full rounded-lg"
+        />
       </div>
 
       <button
