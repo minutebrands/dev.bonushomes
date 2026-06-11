@@ -10,7 +10,7 @@ export default function HomePage() {
     <main className="min-h-screen flex items-center justify-center bg-white">
       <div className="w-full max-w-[500px] px-8">
         <Image
-          src="/bhlogo.webp"
+          src="/logo-500px.webp"
           alt="Bonus Homes"
           width={500}
           height={200}
