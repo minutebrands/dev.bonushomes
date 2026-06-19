@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Nav } from '@/components/Nav'
@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 const features = [
   {
     title: 'Rapid Deployment Capability',
-    body: 'ReadyPod units are designed for speed. Having no need for a permanent foundation, our Duplex and Bungalow models can be delivered and operational within hours, allowing emergency response teams to provide immediate shelter to displaced families and critical personnel.',
+    body: 'InstantHome units are designed for speed. Having no need for a permanent foundation, our Duplex and Bungalow models can be delivered and operational within hours, allowing emergency response teams to provide immediate shelter to displaced families and critical personnel.',
   },
   {
     title: 'Industrial-Grade Durability & Strength',
-    body: 'Built to withstand harsh environments, ReadyPod structures feature reinforced steel frames to ensure long-term resilience. Whether deployed in hurricane zones, wildfire aftermaths, or flood-prone regions, these units are engineered to perform under pressure and remain intact when traditional housing fails.',
+    body: 'Built to withstand harsh environments, InstantHome structures feature reinforced steel frames to ensure long-term resilience. Whether deployed in hurricane zones, wildfire aftermaths, or flood-prone regions, these units are engineered to perform under pressure and remain intact when traditional housing fails.',
   },
   {
     title: 'Complete Living Quarters',
-    body: 'Each ReadyPod includes a private bathroom, full kitchen, sleeping areas, and climate control—providing comfort, safety, and privacy in even the most chaotic conditions. These turn-key living spaces eliminate the need for separate infrastructure, making them ideal for remote or compromised areas.',
+    body: 'Each InstantHome includes a private bathroom, full kitchen, sleeping areas, and climate control—providing comfort, safety, and privacy in even the most chaotic conditions. These turn-key living spaces eliminate the need for separate infrastructure, making them ideal for remote or compromised areas.',
   },
   {
     title: 'Scalable and Adaptable Footprint',
-    body: "ReadyPod's two core models, the Duplex and the Bungalow, offer flexibility to suit a range of deployment needs. From single-family relief to temporary workforce lodging or mobile command centers, the units can be deployed individually or in clusters, depending on the scale and scope of the emergency.",
+    body: "InstantHome's two core models, the Duplex and the Bungalow, offer flexibility to suit a range of deployment needs. From single-family relief to temporary workforce lodging or mobile command centers, the units can be deployed individually or in clusters, depending on the scale and scope of the emergency.",
   },
 ]
 
@@ -77,22 +77,22 @@ const duplexSlides = [
 const applications = [
   {
     title: 'Natural Disasters',
-    body: 'ReadyPod units are engineered for rapid deployment in the aftermath of hurricanes, floods, wildfires, and other natural disasters.',
+    body: 'InstantHome units are engineered for rapid deployment in the aftermath of hurricanes, floods, wildfires, and other natural disasters.',
     image: '/app-natural-disasters.jpg',
   },
   {
     title: 'Homeless Support',
-    body: 'ReadyPod offers scalable, self-contained housing solutions ideal for transitional shelters and permanent supportive housing.',
+    body: 'InstantHome offers scalable, self-contained housing solutions ideal for transitional shelters and permanent supportive housing.',
     image: '/app-homeless.jpg',
   },
   {
     title: 'Military Use',
-    body: 'ReadyPod units are a versatile solution for military housing, base expansions, and forward operating environments.',
+    body: 'InstantHome units are a versatile solution for military housing, base expansions, and forward operating environments.',
     image: '/app-military.jpg',
   },
   {
     title: 'Veteran Housing',
-    body: 'ReadyPod creates comfortable, private living spaces tailored to the unique needs of veterans.',
+    body: 'InstantHome creates comfortable, private living spaces tailored to the unique needs of veterans.',
     image: '/app-veteran.jpg',
   },
 ]
@@ -116,7 +116,7 @@ export default function PageTesting() {
 
         <div className="relative container-site pt-32 pb-20">
           <div className="max-w-3xl">
-            <p className="text-base text-white mb-6 tracking-wide">Introducing ReadyPod</p>
+            <p className="text-base text-white mb-6 tracking-wide">Introducing InstantHome</p>
             <h1 className="font-display font-black text-white text-5xl md:text-6xl leading-[1.0] tracking-tight mb-8">
               The World's Fastest
               <br />
@@ -136,11 +136,11 @@ export default function PageTesting() {
         </div>
       </section>
 
-      {/* ── READYPOD INTRO ────────────────────────────────────────── */}
+      {/* ── InstantHome INTRO ────────────────────────────────────────── */}
       <section className="py-28 bg-white">
         <div className="container-site">
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <p className="section-label text-brand-400 mb-4">Introducing ReadyPod</p>
+            <p className="section-label text-brand-400 mb-4">Introducing InstantHome</p>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-8" />
             <h2 className="font-display font-black text-primary text-4xl md:text-6xl leading-tight mb-6">
               The World's Fastest Rapidly Deployable Home
@@ -170,21 +170,21 @@ export default function PageTesting() {
               </ul>
               <p className="text-slate-600 leading-relaxed mb-4">
                 In the wake of natural disasters, communities need housing solutions that are fast, durable, and
-                dignified — and that's exactly what ReadyPod delivers. Built on our proven Duplex and Bungalow models,
+                dignified — and that's exactly what InstantHome delivers. Built on our proven Duplex and Bungalow models,
                 these industrial-strength units are engineered for rapid deployment in crisis zones. Whether sheltering
-                displaced families or supporting field operations, ReadyPod units offer safe, self-contained
+                displaced families or supporting field operations, InstantHome units offer safe, self-contained
                 environments that can be operational within hours.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Emergency housing has never been more attainable or adaptable, <em>until now.</em>
               </p>
-              <p className="text-slate-500 text-sm">We invite FEMA and related agencies to explore ReadyPod.</p>
+              <p className="text-slate-500 text-sm">We invite FEMA and related agencies to explore InstantHome.</p>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
               <Image
                 src="/asset-section.jpg"
-                alt="ReadyPod Duplex deployed in the field"
+                alt="InstantHome Duplex deployed in the field"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -288,7 +288,7 @@ export default function PageTesting() {
             <p className="section-label text-brand-400 mb-4">Applications</p>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-8" />
             <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-              ReadyPod is Ideal for Multiple Applications that Need Durable, Rapidly Deployable Housing Solutions
+              Ideal for Multiple Applications that Need Durable, Rapidly Deployable Housing Solutions
             </h2>
           </div>
 
@@ -324,7 +324,7 @@ export default function PageTesting() {
             Resilient options built to meet the urgent demands of emergency housing.
           </h2>
           <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-            Learn how ReadyPod is solving the emergency housing crisis — for governments, military, and humanitarian organizations worldwide.
+            Learn how InstantHome is solving the emergency housing crisis — for governments, military, and humanitarian organizations worldwide.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/book" className="btn-accent text-base py-4 px-10">
