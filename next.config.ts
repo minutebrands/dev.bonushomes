@@ -41,13 +41,6 @@ const nextConfig: NextConfig = {
     ]
   },
 
-  async redirects() {
-    return [
-      { source: '/ria', destination: '/', permanent: false },
-      { source: '/book', destination: '/', permanent: false },
-      { source: '/pagetesting', destination: '/', permanent: false },
-    ]
-  },
 }
 
 export default nextConfig
