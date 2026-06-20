@@ -38,8 +38,9 @@ AUM:           ${data.aum}
   }
 
   // ── Zapier ─────────────────────────────────────────────────────
-  try {
-    await fetch("https://hooks.zapier.com/hooks/catch/27852567/4bxok7e/", {
+  const ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL;
+  if (ZAPIER_WEBHOOK_URL) try {
+    await fetch(ZAPIER_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
